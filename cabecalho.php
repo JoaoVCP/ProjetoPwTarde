@@ -30,6 +30,12 @@
             Home
         </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./usuarioCreate.php">
+            Cadastro de Usuário
+        </a>
+        </li>
+        
 
       
 
