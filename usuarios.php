@@ -19,6 +19,23 @@ $resultado = mysqli_query($conexao, $query);
             <th></th>
         </tr>
     </thead>
+    <tbody>
+        <?php
+            while($linha = mysqli_fetch_array($resultado))
+            {
+                ?>
+                    <tr>
+                        <td><?php echo $linha["id"]; ?></td>
+                        <td><?php echo $linha["nome"]; ?></td>
+                        <td><?php echo $linha["login"]; ?></td>
+                        <td><?php echo $linha["ativo"]; ?></td>
+                        <td></td>
+                    </tr>
+            <?php
+            }
+        ?>
+
+    </tbody>
 </table>
 
 <?php include "rodape.php"; ?>
