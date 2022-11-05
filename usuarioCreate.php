@@ -18,12 +18,10 @@ if( isset($_POST) && !empty($_POST) )
 
     $query = "insert into usuarios (nome, login, senha, ativo) values('$nome', '$login', '$senha', $ativo)"; //asplas simples pra nao conflitar com as duplas do começo do projeto
     $resultado = mysqli_query($conexao, $query);
-    if($resultado){
-        ?>
-        <div class="alert alert-success">
-            Cadastrado com sucesso
-        </div>
-        <?php
+    if($resultado)
+    {
+        header("location ./usuarios.php");
+        exit();
     } else{
         ?>
         <div class="alert alert-danger">
